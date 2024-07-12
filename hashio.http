@@ -1,0 +1,42 @@
+
+@network = testnet
+# @network = mainnet
+@rpc-url = https://{{network}}.hashio.io/api
+
+###
+
+POST {{rpc-url}} HTTP/1.1
+content-type: application/json
+
+{
+    "id": "12",
+    "jsonrpc": "2.0",
+    "method": "net_version",
+    "params": [ ]
+}
+
+###
+
+POST {{rpc-url}} HTTP/1.1
+content-type: application/json
+
+{
+    "id": "12",
+    "jsonrpc": "2.0",
+    "method": "eth_chainId",
+    "params": [ ]
+}
+
+###
+
+POST {{rpc-url}} HTTP/1.1
+content-type: application/json
+
+{
+    "id": "12",
+    "jsonrpc": "2.0",
+    "method": "eth_blockNumber",
+    "params": [ ]
+}
+
+###
