@@ -1,0 +1,20 @@
+{
+    "rest-client.environmentVariables": {
+        "mainnet": {
+            "rpc-url": "https://mainnet.hashio.io/api"
+        },
+        "testnet": {
+            "rpc-url": "https://testnet.hashio.io/api"
+        },
+        "previewnet": {
+            "rpc-url": "https://previewnet.hashio.io/api"
+        },
+        "dev": {
+            "rpc-url": "http://localhost:8545"
+        },
+        "local-node": {
+            "rpc-url": "http://localhost:7546"
+        },
+        "$shared": {}
+    }
+}
