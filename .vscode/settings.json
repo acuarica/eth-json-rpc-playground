@@ -3,20 +3,26 @@
         "content-type": "application/json"
     },
     "rest-client.environmentVariables": {
-        "mainnet": {
+        "ethereum:mainnet": {
+            "rpc-url": "https://cloudflare-eth.com/"
+        },
+        "ethereum:sepolia": {
+            "rpc-url": "https://rpc.sepolia.org/"
+        },
+        "hedera:mainnet": {
             "rpc-url": "https://mainnet.hashio.io/api"
         },
-        "testnet": {
+        "hedera:testnet": {
             "rpc-url": "https://testnet.hashio.io/api"
         },
-        "previewnet": {
+        "hedera:previewnet": {
             "rpc-url": "https://previewnet.hashio.io/api"
+        },
+        "hedera:local-node": {
+            "rpc-url": "http://localhost:7546"
         },
         "dev": {
             "rpc-url": "http://localhost:8545"
-        },
-        "local-node": {
-            "rpc-url": "http://localhost:7546"
         },
         "$shared": {}
     }
