@@ -1,4 +1,7 @@
 {
+    "rest-client.defaultHeaders": {
+        "content-type": "application/json"
+    },
     "rest-client.environmentVariables": {
         "mainnet": {
             "rpc-url": "https://mainnet.hashio.io/api"
