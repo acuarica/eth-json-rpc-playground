@@ -1,15 +1,3 @@
-# https://github.com/Huachao/vscode-restclient
-# https://github.com/Huachao/vscode-restclient?tab=readme-ov-file#environment-variables
-
-###
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "web3_clientVersion", "id": 7, "jsonrpc": "2.0", "params": [ ] }
-
-###
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "net_version", "id": 7, "jsonrpc": "2.0", "params": [ ] }
 
 ###
 POST {{rpc-url}} HTTP/1.1
