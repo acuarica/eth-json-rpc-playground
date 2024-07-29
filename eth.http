@@ -58,3 +58,13 @@ POST {{rpc-url}} HTTP/1.1
         "address": "{{address}}"
     }
 ] }
+
+###
+# @prompt address Contract Address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{address}}",
+    "0x0",
+    "latest"
+] }
