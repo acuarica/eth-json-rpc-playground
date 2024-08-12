@@ -21,10 +21,19 @@ POST {{rpc-url}} HTTP/1.1
 { "method": "eth_getBlockByNumber", "id": 7, "jsonrpc": "2.0", "params": [ "{{blockNumber}}", true ] }
 
 ###
+# @prompt txHash Transaction Hash
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getTransactionByHash", "id": 2, "jsonrpc": "2.0", "params": [
+    "{{txHash}}"
+] }
+
+###
+# @prompt txHash Transaction Hash
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "eth_getTransactionReceipt", "id": 2, "jsonrpc": "2.0", "params": [
-    "0xa30e4ce87c9344cc94b097d2a3d459e9798562ebfe6445b78bf49e2acfc13834",
+    "{{txHash}}",
     true
 ] }
 
