@@ -21,6 +21,14 @@ POST {{rpc-url}} HTTP/1.1
 { "method": "eth_getBlockByNumber", "id": 7, "jsonrpc": "2.0", "params": [ "{{blockNumber}}", true ] }
 
 ###
+# @prompt address Account Address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getProof", "id": 2, "jsonrpc": "2.0", "params": [
+    "{{address}}"
+] }
+
+###
 # @prompt txHash Transaction Hash
 POST {{rpc-url}} HTTP/1.1
 
