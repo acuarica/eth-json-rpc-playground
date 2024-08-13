@@ -105,12 +105,3 @@ POST {{rpc-url}} HTTP/1.1
     },
     "latest"
 ] }
-
-###
-# @prompt txHash Ethereum Transaction Hash
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "debug_traceTransaction", "id": 2, "jsonrpc": "2.0", "params": [
-    "{{txHash}}",
-    {"tracer": "callTracer"}
-] }
