@@ -25,7 +25,9 @@ POST {{rpc-url}} HTTP/1.1
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "eth_getProof", "id": 2, "jsonrpc": "2.0", "params": [
-    "{{address}}"
+    "{{address}}",
+    ["0x0"],
+    "latest"
 ] }
 
 ###
