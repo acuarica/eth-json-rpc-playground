@@ -24,6 +24,12 @@ POST {{rpc-url}} HTTP/1.1
 # @prompt address Account Address
 POST {{rpc-url}} HTTP/1.1
 
+{ "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [ "{{address}}", "latest" ] }
+
+###
+# @prompt address Account Address
+POST {{rpc-url}} HTTP/1.1
+
 { "method": "eth_getProof", "id": 2, "jsonrpc": "2.0", "params": [
     "{{address}}",
     ["0x0"],
