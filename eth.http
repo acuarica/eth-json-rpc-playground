@@ -9,6 +9,11 @@ POST {{rpc-url}} HTTP/1.1
 
 { "method": "eth_blockNumber", "id": 7, "jsonrpc": "2.0", "params": [ ] }
 
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_gasPrice", "id": 7, "jsonrpc": "2.0", "params": [ ] }
+
 ### `Method eth_getBlockReceipts not found`
 POST {{rpc-url}} HTTP/1.1
 
@@ -19,6 +24,14 @@ POST {{rpc-url}} HTTP/1.1
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "eth_getBlockByNumber", "id": 7, "jsonrpc": "2.0", "params": [ "{{blockNumber}}", true ] }
+
+###
+# @prompt address Address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getTransactionCount", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{address}}", "0x811364"
+] }
 
 ###
 # @prompt address Account Address
