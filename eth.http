@@ -17,6 +17,16 @@ POST {{rpc-url}} HTTP/1.1
 ###
 POST {{rpc-url}} HTTP/1.1
 
+{ "method": "eth_protocolVersion", "id": 7, "jsonrpc": "2.0" }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_coinbase", "id": 7, "jsonrpc": "2.0" }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
 { "method": "eth_feeHistory", "id": 7, "jsonrpc":"2.0", "params": ["0x1", "latest", [50.0]] }
 
 ### `Method eth_getBlockReceipts not found`

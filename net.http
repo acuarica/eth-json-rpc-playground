@@ -2,4 +2,14 @@
 ###
 POST {{rpc-url}} HTTP/1.1
 
-{ "method": "net_version", "id": 7, "jsonrpc": "2.0", "params": [ ] }
+{ "method": "net_listening", "id": 7, "jsonrpc": "2.0" }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "net_version", "id": 7, "jsonrpc": "2.0" }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "net_peerCount", "id": 7, "jsonrpc": "2.0" }
