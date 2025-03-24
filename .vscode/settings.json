@@ -3,11 +3,20 @@
         "content-type": "application/json"
     },
     "rest-client.environmentVariables": {
+        "avalanche:mainnet": {
+            "rpc-url": "https://api.avax.network/ext/bc/C/rpc"
+        },
+        "avalanche:fuji": {
+            "rpc-url": "https://api.avax-test.network/ext/bc/C/rpc"
+        },
         "ethereum:mainnet": {
             "rpc-url": "https://cloudflare-eth.com/"
         },
         "ethereum:sepolia": {
             "rpc-url": "https://rpc.sepolia.org/"
+        },
+        "ethereum:holesky": {
+            "rpc-url": "https://ethereum-holesky-rpc.publicnode.com"
         },
         "hedera:mainnet": {
             "rpc-url": "https://mainnet.hashio.io/api"
