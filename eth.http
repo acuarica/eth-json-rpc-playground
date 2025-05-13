@@ -52,17 +52,6 @@ POST {{rpc-url}} HTTP/1.1
 # @prompt address Account Address
 POST {{rpc-url}} HTTP/1.1
 
-{ "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [ "{{address}}", "latest" ] }
-
-### "missing value for required argument 1"
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [ "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" ] }
-
-###
-# @prompt address Account Address
-POST {{rpc-url}} HTTP/1.1
-
 { "method": "eth_getProof", "id": 2, "jsonrpc": "2.0", "params": [
     "{{address}}",
     ["0x0"],
@@ -102,25 +91,6 @@ POST {{rpc-url}} HTTP/1.1
 ] }
 
 ###
-# HTS 0x0000000000000000000000000000000000000167
-# @prompt address
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [ "{{address}}", "latest" ] }
-
-###
-# @prompt address
-# @prompt blockNumber
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [ "{{address}}", "{{blockNumber}}" ] }
-
-### `eth_getCode` using `null` address to compare behaviour
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [ null, "latest" ] }
-
-###
 # @prompt address
 POST {{rpc-url}} HTTP/1.1
 
@@ -139,51 +109,5 @@ POST {{rpc-url}} HTTP/1.1
 { "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
     "{{address}}",
     "0xe",
-    "latest"
-] }
-
-### Call `IERC20(to).balanceOf(token)`
-# @prompt to To address
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
-    {
-        "to": "{{to}}",
-        "data": "0x70a082310000000000000000000000004d1c823b5f15be83fdf5adaf137c2a9e0e78fe15"
-    },
-    "latest"
-] }
-
-### Call `0x167.redirectForToken(USDC, 'name()')`
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
-    {
-        "to": "0x0000000000000000000000000000000000000167",
-        "data": "0x618dc65e0000000000000000000000000000000000000000000000000000000000068cda0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000406fdde0300000000000000000000000000000000000000000000000000000000"
-    },
-    "latest"
-] }
-
-### Call `0x167.redirectForToken(USDC, 'name()')<packed>`
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
-    {
-        "to": "0x0000000000000000000000000000000000000167",
-        "data": "0x618dc65e0000000000000000000000000000000000068cDa06fdde03"
-    },
-    "latest"
-] }
-
-###
-# @prompt address
-POST {{rpc-url}} HTTP/1.1
-
-{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
-    {
-        "to": "{{address}}",
-        "data": "0x"
-    },
     "latest"
 ] }

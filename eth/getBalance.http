@@ -1,0 +1,11 @@
+
+###
+# @prompt address Account Address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [ "{{address}}", "latest" ] }
+
+### "missing value for required argument 1"
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [ "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" ] }
