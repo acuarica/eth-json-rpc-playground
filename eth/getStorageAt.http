@@ -1,0 +1,23 @@
+
+###
+# USDC on mainnet 0x000000000000000000000000000000000006f89a 0.0.456858
+# USDC on testnet 0x0000000000000000000000000000000000068cDa 0.0.429274
+# @prompt address Contract Address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{address}}",
+    "0xe",
+    "latest"
+] }
+
+###
+
+# @prompt block Block Number
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x000000000000000000000000000000000006f89a",
+    "0xe",
+    "{{block}}"
+] }
