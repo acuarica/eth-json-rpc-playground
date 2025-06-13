@@ -1,0 +1,8 @@
+# https://ethereum.github.io/execution-apis/docs/reference/eth_getunclecountbyblocknumber
+
+###
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
+
+{ "method": "eth_getUncleCountByBlockNumber", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x111364"
+] }

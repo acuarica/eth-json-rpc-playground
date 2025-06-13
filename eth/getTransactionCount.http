@@ -1,8 +1,26 @@
+# https://ethereum.github.io/execution-apis/docs/reference/eth_gettransactioncount
 
 ###
 # @prompt address Address
-POST {{rpc-url}} HTTP/1.1
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
 
 { "method": "eth_getTransactionCount", "id": 7, "jsonrpc": "2.0", "params": [
-    "{{address}}", "0x811364"
+    "{{address}}",
+    "0x811364"
+] }
+
+###
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
+
+{ "method": "eth_getTransactionCount", "id": 7, "jsonrpc": "2.0", "params": [
+    "0xc94770007dda54cF92009BFF0dE90c06F603a09f",
+    "latest"
+] }
+
+###
+# missing value for required argument 1
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
+
+{ "method": "eth_getTransactionCount", "id": 7, "jsonrpc": "2.0", "params": [
+    "0xc94770007dda54cF92009BFF0dE90c06F603a09f"
 ] }
