@@ -1,0 +1,8 @@
+
+###
+# @prompt txHash Transaction Hash
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getTransactionByHash", "id": 2, "jsonrpc": "2.0", "params": [
+    "{{txHash}}"
+] }

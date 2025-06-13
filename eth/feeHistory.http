@@ -1,0 +1,9 @@
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_feeHistory", "id": 7, "jsonrpc":"2.0", "params": [
+    "0x1",
+    "latest",
+    [50.0]
+] }

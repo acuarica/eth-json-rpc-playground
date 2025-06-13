@@ -9,11 +9,23 @@
         "avalanche:fuji": {
             "rpc-url": "https://api.avax-test.network/ext/bc/C/rpc"
         },
-        "ethereum:mainnet": {
+        "ethereum:mainnet/cloudflare-eth": {
             "rpc-url": "https://cloudflare-eth.com/"
         },
-        "ethereum:sepolia": {
+        "ethereum:mainnet/1rpc": {
+            "rpc-url": "https://1rpc.io/eth"
+        },
+        "ethereum:mainnet/eth.merkle": {
+            "rpc-url": "https://eth.merkle.io"
+        }, 
+        "ethereum:sepolia/rpc.sepolia": {
             "rpc-url": "https://rpc.sepolia.org/"
+        },
+        "ethereum:sepolia/1rpc": {
+            "rpc-url": "https://1rpc.io/sepolia"
+        },
+        "ethereum:sepolia/publicnode": {
+            "rpc-url": "https://ethereum-sepolia-rpc.publicnode.com"
         },
         "ethereum:holesky": {
             "rpc-url": "https://ethereum-holesky-rpc.publicnode.com"

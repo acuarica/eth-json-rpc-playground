@@ -1,0 +1,10 @@
+
+###
+# @prompt address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getLogs", "id": 2, "jsonrpc": "2.0", "params": [
+    {
+        "address": "{{address}}"
+    }
+] }

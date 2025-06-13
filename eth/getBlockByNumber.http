@@ -1,0 +1,9 @@
+
+###
+# @prompt blockNumber Block number
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getBlockByNumber", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{blockNumber}}",
+    true
+] }

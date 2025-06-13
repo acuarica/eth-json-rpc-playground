@@ -1,0 +1,7 @@
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "web3_sha3", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x01020304"
+] }

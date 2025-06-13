@@ -1,0 +1,8 @@
+
+###
+# @prompt address Address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getTransactionCount", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{address}}", "0x811364"
+] }
