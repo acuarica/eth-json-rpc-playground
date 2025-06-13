@@ -10,4 +10,4 @@ Use <https://marketplace.visualstudio.com/items?itemName=humao.rest-client>.
 
 <https://github.com/Huachao/vscode-restclient?tab=readme-ov-file#environment-variables>
 
-Each file represents an Ethereum namespace.
+Each folder represents an Ethereum namespace.

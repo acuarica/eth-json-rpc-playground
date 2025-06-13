@@ -1,3 +1,7 @@
+# https://ethereum.github.io/execution-apis/docs/reference/eth_getstorageat
+# https://www.alchemy.com/docs/node/ethereum/ethereum-api-endpoints/eth-get-storage-at
+# https://www.quicknode.com/docs/ethereum/eth_getStorageAt
+# https://docs.metamask.io/services/reference/ethereum/json-rpc-methods/eth_getstorageat/
 
 ###
 # USDC on mainnet 0x000000000000000000000000000000000006f89a 0.0.456858
@@ -11,10 +15,26 @@ POST {{rpc-url}} HTTP/1.1
     "latest"
 ] }
 
-###
+### missing value for required argument 2
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
 
+{ "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x000000000000000000000000000000000006f89a",
+    "0xe"
+] }
+
+### missing value for required argument 2
+# Uniswap Protocol
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
+
+{ "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    "0x1"
+] }
+
+###
 # @prompt block Block Number
-POST {{rpc-url}} HTTP/1.1
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
 
 { "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
     "0x000000000000000000000000000000000006f89a",

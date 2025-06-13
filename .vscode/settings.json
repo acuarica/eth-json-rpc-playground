@@ -18,6 +18,18 @@
         "ethereum:mainnet/eth.merkle": {
             "rpc-url": "https://eth.merkle.io"
         }, 
+        "ethereum:mainnet/quicknode": {
+            "rpc-url": "https://smart-weathered-needle.quiknode.pro/",
+            "apiKey": "QUICKNODE_KEY"
+        },
+        "ethereum:mainnet/alchemy": {
+            "rpc-url": "https://eth-mainnet.g.alchemy.com/v2/",
+            "apiKey": "ALCHEMY_KEY"
+        },
+        "ethereum:mainnet/infura": {
+            "rpc-url": "https://mainnet.infura.io/v3/",
+            "apiKey": "INFURA_KEY"
+        },
         "ethereum:sepolia/rpc.sepolia": {
             "rpc-url": "https://rpc.sepolia.org/"
         },

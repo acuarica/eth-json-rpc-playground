@@ -1,5 +1,5 @@
 
 ###
-POST {{rpc-url}} HTTP/1.1
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
 
 { "method": "net_version", "id": 7, "jsonrpc": "2.0" }
