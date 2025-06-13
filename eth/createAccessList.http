@@ -10,3 +10,14 @@ POST {{rpc-url}} HTTP/1.1
     },
     "latest"
 ] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_createAccessList", "id": 7, "jsonrpc": "2.0", "params": [
+    {
+        "to": "0x000000000000000000000000000000000006f89a",
+        "data": "0x70a082310000000000000000000000004d1c823b5f15be83fdf5adaf137c2a9e0e78fe15"
+    },
+    "latest"
+] }
