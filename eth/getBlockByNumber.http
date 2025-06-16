@@ -7,3 +7,11 @@ POST {{rpc-url}} HTTP/1.1
     "{{blockNumber}}",
     true
 ] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getBlockByNumber", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x140ce28",
+    true
+] }

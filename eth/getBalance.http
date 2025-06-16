@@ -4,17 +4,28 @@
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [
-    "{{address}}", "latest"
+    "{{address}}",
+    "latest"
 ] }
 
 ###
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [
-    "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266", "latest"
+    "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "latest"
 ] }
 
-### "missing value for required argument 1"
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [
+    "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "0x140d78a",
+    null
+] }
+
+### -32602: missing value for required argument 1
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "eth_getBalance", "id": 7, "jsonrpc": "2.0", "params": [

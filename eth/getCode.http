@@ -4,16 +4,33 @@
 # @prompt address
 POST {{rpc-url}} HTTP/1.1
 
-{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [ "{{address}}", "latest" ] }
+{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{address}}",
+    "latest"
+] }
 
 ###
 # @prompt address
 # @prompt blockNumber
 POST {{rpc-url}} HTTP/1.1
 
-{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [ "{{address}}", "{{blockNumber}}" ] }
+{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{address}}",
+    "{{blockNumber}}"
+] }
 
 ### `eth_getCode` using `null` address to compare behaviour
 POST {{rpc-url}} HTTP/1.1
 
-{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [ null, "latest" ] }
+{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [
+    null,
+    "latest"
+] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [
+    "0xe41cc21e49891658b84be44b89c3dc17c2e8bfa9",
+    "latest"
+] }
