@@ -5,3 +5,39 @@ POST {{rpc-url}} HTTP/1.1
 { "method": "web3_sha3", "id": 7, "jsonrpc": "2.0", "params": [
     "0x01020304"
 ] }
+
+###
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
+
+{ "method": "web3_sha3", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x01020304",
+    "0x811364"
+] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "web3_sha3", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x"
+] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "web3_sha3", "id": 7, "jsonrpc": "2.0", "params": [
+    "invalid hex string"
+] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "web3_sha3", "id": 7, "jsonrpc": "2.0", "params": [
+    "0xinvalid hex string"
+] }
+
+### odd length hex string error
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "web3_sha3", "id": 7, "jsonrpc": "2.0", "params": [
+    "0x123"
+] }
