@@ -23,12 +23,22 @@ POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
     "0xe"
 ] }
 
-### missing value for required argument 2
-# Uniswap Protocol
+###
+# USDC
 POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
 
 { "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
-    "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "0x1",
+    "latest"
+] }
+
+### missing value for required argument 2
+# USDC
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
+
+{ "method": "eth_getStorageAt", "id": 7, "jsonrpc": "2.0", "params": [
+    "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
     "0x1"
 ] }
 
