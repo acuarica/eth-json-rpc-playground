@@ -1,7 +1,4 @@
 
-
-
-
 ### Call `IERC20(to).balanceOf(token)`
 # @prompt to To address
 POST {{rpc-url}} HTTP/1.1
@@ -62,3 +59,15 @@ POST {{rpc-url}} HTTP/1.1
 ] }
 
 ###
+# isAssociated
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
+    {
+        "from": "0x7D2402af7Dd0285452601489e7Ea181296f8a422",
+        "to": "0x000000000000000000000000000000000038b3db",
+        "data": "0x4d8fdd6d"
+    },
+    "latest"
+] }
+
