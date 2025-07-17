@@ -7,3 +7,11 @@ POST {{rpc-url}} HTTP/1.1
     "{{txHash}}",
     {"tracer": "callTracer"}
 ] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "debug_traceTransaction", "id": 2, "jsonrpc": "2.0", "params": [
+    "0xbd891529ebe82ad5e92bf559f08629b48a307e8fabc4b2b25aac831cc5f2093c",
+    {"tracer": "prestateTracer"}
+] }
