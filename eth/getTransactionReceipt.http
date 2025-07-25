@@ -15,3 +15,10 @@ POST {{rpc-url}} HTTP/1.1
     "0xb440b9f35093b4443f7a64f0524e0fe3753fd352f5de7d39b26dba69dc3dab9c",
     true
 ] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getTransactionReceipt", "id": 2, "jsonrpc": "2.0", "params": [
+    "0xd642d239d23388b5adf3377d5f4459991d2c2c3ca14d4766d7cccfd9456f4f98"
+] }
