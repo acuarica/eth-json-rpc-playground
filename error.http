@@ -3,3 +3,9 @@
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "not-found", "jsonrpc": "2.0", "params": [] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getBalance", "jsonrpc": "2.0", "params": [1, 2, 3] }
+
