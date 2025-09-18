@@ -1,0 +1,33 @@
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
+    {
+        "to": "0x0000000000000000000000000000000000000002",
+        "data": "0x01020304"
+    },
+    "latest"
+] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
+    {
+        "to": "0x0000000000000000000000000000000000000002",
+        "data": "0x68656c6c6f2c776f726c6421"
+    },
+    "latest"
+] }
+
+###
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_call", "id": 7, "jsonrpc": "2.0", "params": [
+    {
+        "to": "0x0000000000000000000000000000000000000002",
+        "data": "0x68656c6c6f2c776f726c6421"
+    },
+    "earliest"
+] }
