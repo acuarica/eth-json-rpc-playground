@@ -1,6 +1,6 @@
 
 ###
-# @prompt txHash Ethereum Transaction Hash
+# @prompt txHash Transaction hash to trace
 POST {{rpc-url}} HTTP/1.1
 
 { "method": "debug_traceTransaction", "id": 2, "jsonrpc": "2.0", "params": [
@@ -22,6 +22,15 @@ POST {{rpc-url}} HTTP/1.1
 { "method": "debug_traceTransaction", "id": 2, "jsonrpc": "2.0", "params": [
     "0xbd891529ebe82ad5e92bf559f08629b48a307e8fabc4b2b25aac831cc5f2093c",
     {"tracer": "prestateTracer"}
+] }
+
+###
+# @prompt txHash Transaction hash to trace
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "debug_traceTransaction", "id": 2, "jsonrpc": "2.0", "params": [
+    "{{txHash}}",
+    {"tracer": "opcodeLogger"}
 ] }
 
 ###
