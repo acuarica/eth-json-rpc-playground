@@ -1,0 +1,8 @@
+
+###
+# @prompt payload RLP-encoded signed transaction payload
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
+
+{ "method": "eth_sendRawTransaction", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{payload}}"
+] }

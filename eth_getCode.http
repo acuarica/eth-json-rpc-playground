@@ -20,7 +20,7 @@ POST {{rpc-url}} HTTP/1.1
 ] }
 
 ### `eth_getCode` using `null` address to compare behaviour
-POST {{rpc-url}} HTTP/1.1
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
 
 { "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [
     null,
@@ -33,4 +33,14 @@ POST {{rpc-url}} HTTP/1.1
 { "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [
     "0xe41cc21e49891658b84be44b89c3dc17c2e8bfa9",
     "latest"
+] }
+
+###
+# Sepolia block number
+# @prompt address
+POST {{rpc-url}} HTTP/1.1
+
+{ "method": "eth_getCode", "id": 7, "jsonrpc": "2.0", "params": [
+    "{{address}}",
+    "0x93af78"
 ] }

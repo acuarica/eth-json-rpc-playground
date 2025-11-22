@@ -1,6 +1,6 @@
 
 ###
-POST {{rpc-url}} HTTP/1.1
+POST {{rpc-url}}{{$processEnv %apiKey}} HTTP/1.1
 
 { "method": "eth_getBlockByHash", "id": 7, "jsonrpc": "2.0", "params": [
     "0x1b2289573d0ecc6a0a2b385482e13746506e52f370413d2d8b2726ee3ce18e9d",
